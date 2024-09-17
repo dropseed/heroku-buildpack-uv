@@ -56,10 +56,10 @@ log "Install uv Python version"
 uv python install 2>&1 | indent
 
 log "Export $REQUIREMENTS_FILE from uv"
-uv export --output-file "$REQUIREMENTS_FILE" --no-dev --frozen 2>&1 | indent
+uv export --output-file "$REQUIREMENTS_FILE" --no-dev --no-emit-project --frozen 2>&1 | indent
 
 log "Export $REQUIREMENTS_TEST_FILE from uv (for Heroku CI)"
-uv export --output-file "$REQUIREMENTS_TEST_FILE" --frozen 2>&1 | indent
+uv export --output-file "$REQUIREMENTS_TEST_FILE" --no-emit-project --frozen 2>&1 | indent
 
 if [ -f "$RUNTIME_FILE" ] ; then
     log "$RUNTIME_FILE found, skipping $RUNTIME_FILE generation" >&2
