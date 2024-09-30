@@ -38,7 +38,7 @@ for env_file in "$ENV_DIR"/UV_* ; do
 done
 
 if [ -z "${UV_VERSION:-}" ] ; then
-    export UV_VERSION=0.4.15
+    export UV_VERSION=0.4.17
     log "No uv version specified in UV_VERSION config var. Defaulting to $UV_VERSION."
 else
     log "Using uv version from UV_VERSION config var: $UV_VERSION"
