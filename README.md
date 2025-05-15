@@ -1,3 +1,6 @@
+> [!TIP]
+> [Official Heroku buildpacks now support uv](https://devcenter.heroku.com/changelog-items/3238)
+
 # heroku-buildpack-uv
 
 A Heroku Buildpack for [uv](https://github.com/astral-sh/uv).
